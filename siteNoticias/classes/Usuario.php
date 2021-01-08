@@ -1,13 +1,5 @@
 <?php
-    /**
-     * Classe Usuário
-     * Desenvolvida em aulas no Curso Técnico em Informática do CIMOL
-     * @author Artur arturkontzm@gmail.com
-     * @version 0.1
-     * @access public
-     * @copyright GPL 2020, Inf63
-     * @since 09/07/2020
-     */
+
 class Usuario{
     /**
      * @access private
@@ -99,10 +91,7 @@ class Usuario{
 
     /**
      * Responsável por carregar a página índice adequada
-     * @access public
-     * @author Artur
-     * @since 05/08/2020
-     * @version 0.2
+
      */
     public function index(){
         if(isset($_SESSION["email"])){
@@ -114,10 +103,7 @@ class Usuario{
 
     /**
      * Responsável por carregar a página de lista de usuários
-     * @access public
-     * @author Artur
-     * @since 05/08/2020
-     * @version 0.1
+
      */
     public function listar(){
         include HOME_DIR."view/paginas/usuarios/listar.php";
@@ -125,10 +111,7 @@ class Usuario{
 
     /**
      * Responsável por carregar a página de criação de cadastro
-     * @access public
-     * @author Artur
-     * @since 05/08/2020
-     * @version 0.1
+
      */
     public function criar(){
         include HOME_DIR."view/paginas/usuarios/cadastrar.php";
@@ -136,10 +119,7 @@ class Usuario{
 
     /**
      * Responsável por carregar a página de autenticação
-     * @access public
-     * @author Artur
-     * @since 05/08/2020
-     * @version 0.1
+
      */
     public function autenticar(){
         include HOME_DIR."view/paginas/usuarios/autenticar.php";
@@ -147,10 +127,7 @@ class Usuario{
 
     /**
      * Responsável por carregar a página de alteração de senha
-     * @access public
-     * @author Artur
-     * @since 08/08/2020
-     * @version 0.1
+
      */
     public function alterarSenha(){
         include HOME_DIR."view/paginas/usuarios/alterarSenha.php";
@@ -158,10 +135,7 @@ class Usuario{
 
     /**
      * Responsável por carregar a página de alteração de dados
-     * @access public
-     * @author Artur
-     * @since 08/08/2020
-     * @version 0.1
+
      */
     public function alterar($id){
         echo("Alterar dados do usuário #$id");
@@ -170,10 +144,7 @@ class Usuario{
 
     /**
      * Responsável por realizar o logout
-     * @access public
-     * @author Artur
-     * @since 05/08/2020
-     * @version 0.1
+
      */
     public function logout(){
         unset($_SESSION["email"]);
@@ -184,10 +155,7 @@ class Usuario{
 
     /**
      * Responsável por validar um cadastro
-     * @access public
-     * @author Artur
-     * @since 05/08/2020
-     * @version 0.1
+
      */
     public function validarCadastro(){
         $repeated=false;
@@ -223,10 +191,7 @@ class Usuario{
 
     /**
      * Responsável por criar o cadastro
-     * @access public
-     * @author Artur
-     * @since 05/08/2020
-     * @version 0.1
+
      */
     public function criarCadastro($nome, $email){
         $senha=md5('123');//Senha padrão
@@ -244,10 +209,7 @@ class Usuario{
 
     /**
      * Responsável por validar um login
-     * @access public
-     * @author Artur
-     * @since 05/08/2020
-     * @version 0.1
+
      */
     public function validar(){
         //Setar variáveis
@@ -285,10 +247,7 @@ class Usuario{
 
     /**
      * Responsável por alterar a senha do usuário
-     * @access public
-     * @author Artur
-     * @since 08/08/2020
-     * @version 0.1
+
      */
     public function alterarPassword(){
         //Setar variáveis
@@ -314,10 +273,7 @@ class Usuario{
 
     /**
      * Responsável por apagar um usuário
-     * @access public
-     * @author Artur
-     * @since 08/08/2020
-     * @version 0.1
+
      */
     public function apagar($id){
         $mysql= Conexao::getConexao();
@@ -333,10 +289,7 @@ class Usuario{
 
     /**
      * Responsável por alterar os dados de um usuário
-     * @access public
-     * @author Artur
-     * @since 08/08/2020
-     * @version 0.1
+
      */
     public function alterarDados($id){
         //Setar variáveis
