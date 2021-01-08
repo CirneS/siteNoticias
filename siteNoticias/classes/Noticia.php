@@ -1,14 +1,5 @@
 <?php
-    /**
-     * Classe Notícia
-     * Desenvolvida em aulas no Curso Técnico em Informática do CIMOL
-     * @author Artur arturkontzm@gmail.com
-     * @author Cândido candido.cimol@gmail.com
-     * @version 0.1
-     * @access public
-     * @copyright GPL 2020, Inf63
-     * @since 09/07/2020
-     */
+
     class Noticia{
         /**
          * @access private
@@ -139,9 +130,6 @@
 
         /**
          * Método responsável por carregar a página inícial
-         * @access public
-         * @author Cândido
-         * @since 09/07/2020
          */
         public function index(){
             $this->listar();
@@ -149,10 +137,6 @@
 
         /**
          * Método responsável por listar as notícias
-         * @access public
-         * @author Artur
-         * @since 12/08/2020
-         * @version 0.2
          */
         public function listar(){
             $mysql=Conexao::getConexao();
@@ -169,10 +153,6 @@
 
         /**
          * Método responsável por carregar página para criar novas notícias
-         * @access public
-         * @author Artur
-         * @since 12/08/2020
-         * @version 0.1
          */
         public  function nova(){
             if(isset($_SESSION['email'])){
@@ -184,10 +164,6 @@
 
         /**
          * Método responsável por salvar novas notícias
-         * @access public
-         * @author Artur
-         * @since 12/08/2020
-         * @version 0.1
          */
         public  function salvar(){
             $id = $_SESSION['id'];
@@ -209,10 +185,7 @@
 
         /**
          * Método responsável por carregar as notícias
-         * @access public
-         * @author Artur
-         * @since 12/08/2020
-         * @version 0.2
+
          */
         public  function ver($id){
             $mysql=Conexao::getConexao();
@@ -230,10 +203,7 @@
 
         /**
          * Método responsável por excluir uma notícia
-         * @access public
-         * @author Artur
-         * @since 19/08/2020
-         * @version 0.1
+
          */
         public  function excluir($id){
             if(isset($_SESSION['email'])){
